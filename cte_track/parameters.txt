@@ -1,0 +1,248 @@
+CTE LENGTH 100
+It's total error:0.992429
+It's p error    :1.033
+It's d error    :-0.007
+It's i error    :83.5141
+Im Kp_          :0.07
+Im Kd_          :0
+Im Ki_          :0
+
+
+CTE LENGTH 200
+It's total error:0.233962
+It's p error    :0.8063
+It's d error    :0.0078
+It's i error    :116.757
+Im Kp_          :0.112
+Im Kd_          :0.19
+Im Ki_          :3.9e-05
+
+
+CTE LENGTH 300
+It's total error:0.197978
+It's p error    :-0.24
+It's d error    :-0.0047
+It's i error    :141.585
+Im Kp_          :0.15
+Im Kd_          :0.74
+Im Ki_          :4.6e-05
+
+
+CTE LENGTH 400
+It's total error:0.152405
+It's p error    :0.462
+It's d error    :0.0509
+It's i error    :164.044
+Im Kp_          :0.15
+Im Kd_          :1.41
+Im Ki_          :7.9e-05
+
+
+CTE LENGTH 500
+It's total error:0.276039
+It's p error    :0.0431
+It's d error    :-0.0442
+It's i error    :206.567
+Im Kp_          :0.188
+Im Kd_          :1.88
+Im Ki_          :9.4e-05
+
+
+CTE LENGTH 600
+It's total error:0.095375
+It's p error    :0.1995
+It's d error    :0.0428
+It's i error    :247.417
+Im Kp_          :0.22
+Im Kd_          :2.55
+Im Ki_          :9.5e-05
+
+
+CTE LENGTH 700
+It's total error:0.0184232
+It's p error    :0.1275
+It's d error    :0.0088
+It's i error    :255.566
+Im Kp_          :0.22
+Im Kd_          :2.55
+Im Ki_          :0.000195
+
+
+CTE LENGTH 800
+It's total error:0.0637223
+It's p error    :-0.1353
+It's d error    :-0.0075
+It's i error    :256.348
+Im Kp_          :0.24
+Im Kd_          :2.75
+Im Ki_          :0.000255
+
+
+CTE LENGTH 900
+It's total error:0.0620946
+It's p error    :-0.3
+It's d error    :0.0121
+It's i error    :238.946
+Im Kp_          :0.24
+Im Kd_          :2.75
+Im Ki_          :0.000355
+
+
+CTE LENGTH 1000
+It's total error:0.384401
+It's p error    :0.5832
+It's d error    :-0.1585
+It's i error    :249.7
+Im Kp_          :0.246
+Im Kd_          :2.83
+Im Ki_          :0.000441
+
+
+CTE LENGTH 1100
+It's total error:0.064768
+It's p error    :-0.5113
+It's d error    :-0.0195
+It's i error    :250.362
+Im Kp_          :0.268
+Im Kd_          :3.09
+Im Ki_          :0.000493
+
+
+CTE LENGTH 1200
+It's total error:0.567957
+It's p error    :-1.0188
+It's d error    :0.0045
+It's i error    :201.366
+Im Kp_          :0.281
+Im Kd_          :3.93
+Im Ki_          :0.000496
+
+
+CTE LENGTH 1300
+It's total error:0.100607
+It's p error    :-0.1292
+It's d error    :0.0045
+It's i error    :126.491
+Im Kp_          :0.361
+Im Kd_          :4.13
+Im Ki_          :0.000496
+
+
+CTE LENGTH 1400
+It's total error:0.0775028
+It's p error    :0.1162
+It's d error    :-0.0833
+It's i error    :126.187
+Im Kp_          :0.361
+Im Kd_          :4.13
+Im Ki_          :0.000596
+
+
+CTE LENGTH 1500
+It's total error:0.0731212
+It's p error    :0.174
+It's d error    :0.0596
+It's i error    :185.364
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.000617
+
+
+CTE LENGTH 1600
+It's total error:0.0630535
+It's p error    :0.0772
+It's d error    :0.0433
+It's i error    :178.548
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.000717
+
+
+CTE LENGTH 1700
+It's total error:0.0301897
+It's p error    :-0.2961
+It's d error    :-0.0115
+It's i error    :164.439
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.000817
+
+
+CTE LENGTH 1800
+It's total error:0.0513582
+It's p error    :-0.1641
+It's d error    :-0.01
+It's i error    :142.912
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.000917
+
+
+CTE LENGTH 1900
+It's total error:0.046064
+It's p error    :-0.1305
+It's d error    :0.0239
+It's i error    :120.868
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.001017
+
+
+CTE LENGTH 2000
+It's total error:0.0354001
+It's p error    :-0.108
+It's d error    :-0.0032
+It's i error    :101.266
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.001117
+
+
+CTE LENGTH 2100
+It's total error:0.0290805
+It's p error    :-0.3013
+It's d error    :-0.0067
+It's i error    :87.6217
+Im Kp_          :0.433
+Im Kd_          :4.2
+Im Ki_          :0.001217
+
+
+CTE LENGTH 2200
+It's total error:0.103015
+It's p error    :0.5242
+It's d error    :-0.0521
+It's i error    :87.1096
+Im Kp_          :0.433
+Im Kd_          :4.21
+Im Ki_          :0.001315
+
+
+CTE LENGTH 2300
+It's total error:0.0249442
+It's p error    :0.0453
+It's d error    :-0.0284
+It's i error    :86.0401
+Im Kp_          :0.433
+Im Kd_          :4.43
+Im Ki_          :0.001393
+
+
+CTE LENGTH 2400
+It's total error:0.0347326
+It's p error    :-0.111
+It's d error    :-0.0228
+It's i error    :70.7547
+Im Kp_          :0.433
+Im Kd_          :4.43
+Im Ki_          :0.001493
+
+
+CTE LENGTH 2500
+It's total error:0.0414323
+It's p error    :-0.2126
+It's d error    :0.002
+It's i error    :66.0252
+Im Kp_          :0.433
+Im Kd_          :4.76
+Im Ki_          :0.00156

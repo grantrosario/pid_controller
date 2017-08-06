@@ -1,92 +1,57 @@
 # CarND-Controls-PID
-Self-Driving Car Engineer Nanodegree Program
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
+[image1]: ./pic/car_pic.png
+[image1]: ./pic/plot.png
+
+This is part of udacity self-driving car nanodegree project part4. In this project I have runed the car in the simulator by adjusting steering angle of the car using PID control. To implement PID controller we have to tune three parameters. **Kp_**(proportional control) to handle overal Cross-Track-Error(difference between model's steering angle and required steering angle), **Kd_**(Differntial control) to handle differential of CTE and **Ki_**(Integeral control) to handle integeral of CTE.
+
+The source code of this project consists with followings.
+* main.cpp: Recieve data and process data from simulator.
+* PID.h/PID.cpp: code to proceed the PID Control. 
+* visualization.ipynb jupyter notebook file to visualize the relation ship between Mean Squared CTE and parameters. 
+
+ 
+
+The Simulator can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases).
 
 ---
 
-## Dependencies
-
-* cmake >= 3.5
- * All OSes: [click here for installation instructions](https://cmake.org/install/)
-* make >= 4.1
-  * Linux: make is installed by default on most Linux distros
-  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
-  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
-* gcc/g++ >= 5.4
-  * Linux: gcc / g++ is installed by default on most Linux distros
-  * Mac: same deal as make - [install Xcode command line tools]((https://developer.apple.com/xcode/features/)
-  * Windows: recommend using [MinGW](http://www.mingw.org/)
-* [uWebSockets](https://github.com/uWebSockets/uWebSockets)
-  * Run either `./install-mac.sh` or `./install-ubuntu.sh`.
-  * If you install from source, checkout to commit `e94b6e1`, i.e.
-    ```
-    git clone https://github.com/uWebSockets/uWebSockets 
-    cd uWebSockets
-    git checkout e94b6e1
-    ```
-    Some function signatures have changed in v0.14.x. See [this PR](https://github.com/udacity/CarND-MPC-Project/pull/3) for more details.
-* Simulator. You can download these from the [project intro page](https://github.com/udacity/self-driving-car-sim/releases) in the classroom.
-
-There's an experimental patch for windows in this [PR](https://github.com/udacity/CarND-PID-Control-Project/pull/3)
-
 ## Basic Build Instructions
 
+I used xcode as main IDE. You can execute project with ide_profiles/xcode/PARTICLE_FILTER.xcodeproj file. 
+
+Also you can execute project with following steps.
+0. Install [uWebSocketIO](https://github.com/uWebSockets/uWebSockets) for either Linux or Mac systems and [Windows 10 Bash on Ubuntu](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/) for windows.
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./pid`. 
+3. Compile: `cmake .. && make` 
+4. Run it: `./particle_filter`  
+5. Run the simulator and watch the results.
 
-## Editor Settings
+---
+## Model Construction Steps.
 
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
+### Update parameters. 
+* To implement the PID control I have used following logic.
+    * Increase Kp_ parameter by 0.001 if the recent 30th Mean Square Error value of the controller is greater than 0.3 
+    * Increase Kd_ parameter by 0.01 if the recent 30th Mean Square Error value of the controller is with in 0.3 and 0.1
+    * Increase Ki_ parameter by 0.000001 if the recent 30th Mean Squar Error value of the controller is with in 0.1 and 0.01
+    
+### Select tuned parameters.
 
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
+* Rather than let the parameters to keep update themselves we have to select parameters for follwing reasons. 
+    * (1) Cannot control steering angle of initial steps of driving. 
+    * (2) Excessively increased parameter could lead to further oscillation. 
+* By tracking Kp_, Kd_, and Ki_ value find the parameter bring us the best result. 
 
-## Code Style
+![alt text][image2]
 
-Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
 
-## Project Instructions and Rubric
+---
 
-Note: regardless of the changes you make, your project must be buildable using
-cmake and make!
+## Results
+* The Car run with this PID-Control
 
-More information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
-for instructions and the project rubric.
+[![alt text][image1]](https://www.youtube.com/watch?v=Iz-l3CekfO8)
 
-## Hints!
-
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
-
-## Call for IDE Profiles Pull Requests
-
-Help your fellow students!
-
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to we ensure
-that students don't feel pressured to use one IDE or another.
-
-However! I'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
-
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
-
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
-
-Frankly, I've never been involved in a project with multiple IDE profiles
-before. I believe the best way to handle this would be to keep them out of the
-repo root to avoid clutter. My expectation is that most profiles will include
-instructions to copy files to a new location to get picked up by the IDE, but
-that's just a guess.
-
-One last note here: regardless of the IDE used, every submitted project must
-still be compilable with cmake and make./
