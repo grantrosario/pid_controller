@@ -2,7 +2,7 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 [image1]: ./pic/car_pic.png
-[image1]: ./pic/plot.png
+[image2]: ./pic/plot.png
 
 This is part of udacity self-driving car nanodegree project part4. In this project I have runed the car in the simulator by adjusting steering angle of the car using PID control. To implement PID controller we have to tune three parameters. **Kp_**(proportional control) to handle overal Cross-Track-Error(difference between model's steering angle and required steering angle), **Kd_**(Differntial control) to handle differential of CTE and **Ki_**(Integeral control) to handle integeral of CTE.
 
